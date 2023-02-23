@@ -37,7 +37,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-home"></i>  <span>V.A Project 1</span></a>
+              <a href="cia.html" class="site_title"><i class="fa fa-home"></i>  <span>V.A Project 1</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -75,22 +75,22 @@
           </div>
         
           <script>
-            fetch('./pdf_files/editing')
+            fetch('./json_files/dia.txt')
               .then(response => response.json())
               .then(data => {
-                let i = 0;
+                let i = 1;
                 data.forEach(obj => {
                   const header = document.createElement('div');
                   header.className = 'accordion-header';
                   header.innerHTML =`<h2 class="accordion-header" id="heading${i}">
                                       <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapse${i}" aria-controls="collapse${i}">
-                                      CIA-${i} ${obj.title}
+                                        DIA - ${i} ==> ${obj.title}
                                       </button>
                                       </h2>`
                   
                   const content = document.createElement('div');
                   content.className = 'accordion-content';
-                  content.innerHTML = `<div id="collapse${i}" class="accordion-collapse collapse show" aria-labelledby="heading${i}" data-bs-parent="#accordionExample">
+                  content.innerHTML = `<div id="collapse${i}" class="accordion-collapse collapse" aria-labelledby="heading${i}" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                         ${obj.description}
                                         </div>
